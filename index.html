@@ -16,7 +16,7 @@
     <main class="main">
         <div class="container main-container">
             <form class="form" action="">
-                <textarea id="textarea-keywords" name="" id="" cols="30" rows="10"></textarea>
+                <textarea id="textarea-domains" name="" id="" cols="30" rows="10"></textarea>
                 <div class="buttons-container">
                     <button id="convert-btn">Convert</button>
                     <button id="copy-btn">Copy</button>
@@ -25,26 +25,22 @@
                     <div class="zone">
                         <p>Выбор доменной зоны</p>
                         <div class="container">
-                            <div class="radio-item">
-                                <input name="zone" type="radio" value=".sbs" checked> <span>.sbs</span>
-                            </div>
-                            <div class="radio-item">
-                                <input name="zone" type="radio" value=".top"> <span>.top</span>
-                            </div>
-                            <div class="radio-item">
-                                <input name="zone" type="radio" value=".buzz"> <span>.buzz</span>
-                            </div>
+                            <label class="zone-item"><input name="zone" type="radio" value=".sbs" checked>.sbs</label>
+                            <label class="zone-item"><input name="zone" type="radio" value=".top">.top</label>
+                            <label class="zone-item"><input name="zone" type="radio" value=".buzz">.buzz</label>
                         </div>
                     </div>
                     <div class="numbers">
                         <p>Добавление доп. случайных цифр</p>
                         <div class="container">
-                            <div class="radio-item">
-                                <input name="numbers" type="radio" value="yes"> <span>Да</span>
-                            </div>
-                            <div class="radio-item">
-                                <input name="numbers" type="radio" value="no" checked> <span>Нет</span>
-                            </div>
+                            <label class="zone-number"><input name="numbers" type="radio" value="yes">Да</label>
+                            <label class="ыу"><input name="numbers" type="radio" value="no" checked>Нет</label>
+                        </div>
+                    </div>
+                    <div class="counter">
+                        <p>Количесвто одинаковых доменов</p>
+                        <div class="container">
+                            <input class="input-counter" type="number" name="counter" value="1">
                         </div>
                     </div>
                 </div>

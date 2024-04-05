@@ -78,11 +78,11 @@ button:hover{
     -moz-box-shadow: -3px -2px 36px -9px rgba(13,110,253,0.95);
 }
 
-.zone, .numbers {
+.zone, .numbers, .counter {
     text-align: center;
 }
 
-.radio-item {
+.zone-item, .zone-number {
     margin-right: 10px;
     cursor: pointer;
 }

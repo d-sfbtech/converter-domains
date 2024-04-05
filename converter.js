@@ -1,32 +1,46 @@
 const convertBtn = document.querySelector('#convert-btn');
 const copyBtn = document.querySelector('#copy-btn');
-const textareaKeywords = document.querySelector('#textarea-keywords');
+const textareaDomains = document.querySelector('#textarea-domains');
 const info = document.querySelector('.info');
 const domainZone = document.getElementsByName('zone');
 const domainNumbers = document.getElementsByName('numbers');
+const domainCounter = document.querySelector('.input-counter');
 
 
 convertBtn.addEventListener('click', (event) => {
     event.preventDefault();
-    let domainsResult = ''
-    const domainsArray = textareaKeywords.value.split(/\n/);
-
-    domainsArray.forEach(domain => {
-        domainsResult += `${domain.toLowerCase().replace(/ /g, '-')}${addNumberForDomain()}${checkedRadio(domainZone)}\n`
-    })
-
-    textareaKeywords.value = domainsResult
+    textareaDomains.value = countAddDomain()
     toggleBlock(info, 'Домены конвертированы')
 })
 
 copyBtn.addEventListener('click', (event) => {
     event.preventDefault();
-    navigator.clipboard.writeText(textareaKeywords.value).then(function() {
+    navigator.clipboard.writeText(textareaDomains.value).then(function() {
         toggleBlock(info, 'Домены скопированы')
       }, function(err) {
         console.error('Произошла ошибка при копировании текста: ', err);
       });
 })
+
+
+function createDomain(domain){
+    let domainsResult = ''
+    const domainsArray = domain.split(/\n/);
+
+    domainsArray.forEach(domain => {
+        domainsResult += `${domain.toLowerCase().replace(/ /g, '-')}${addNumberForDomain()}${checkedRadio(domainZone)}\n`
+    })
+
+    return domainsResult;
+}
+
+function countAddDomain() {
+    let result = ''
+    for(let i = 0; i < domainCounter.value; i++){
+        result += createDomain(textareaDomains.value)
+    }
+    return result
+}
 
 function toggleBlock(block, textContent) {
     block.textContent = textContent;
