@@ -26,11 +26,14 @@ header h1 {
 }
 
 .container {
-    margin-top: 80px;
-    padding: 20px 0px 100px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.main-container {
+    margin-top: 80px;
+    padding: 20px 0px 100px 0px;
     box-shadow: 0px 1px 19px 1px rgba(0,0,0,0.88);
     -webkit-box-shadow: 0px 1px 19px 1px rgba(0,0,0,0.88);
     -moz-box-shadow: 0px 1px 19px 1px rgba(0,0,0,0.88);
@@ -73,6 +76,22 @@ button:hover{
     box-shadow: -3px -2px 36px -9px rgba(13,110,253,0.95);
     -webkit-box-shadow: -3px -2px 36px -9px rgba(13,110,253,0.95);
     -moz-box-shadow: -3px -2px 36px -9px rgba(13,110,253,0.95);
+}
+
+.zone, .numbers {
+    text-align: center;
+}
+
+.radio-item {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .hidden {

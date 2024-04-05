@@ -14,12 +14,39 @@
         <h1>Convert Domains</h1>
     </header>
     <main class="main">
-        <div class="container">
+        <div class="container main-container">
             <form class="form" action="">
                 <textarea id="textarea-keywords" name="" id="" cols="30" rows="10"></textarea>
                 <div class="buttons-container">
                     <button id="convert-btn">Convert</button>
                     <button id="copy-btn">Copy</button>
+                </div>
+                <div class="settings">
+                    <div class="zone">
+                        <p>Выбор доменной зоны</p>
+                        <div class="container">
+                            <div class="radio-item">
+                                <input name="zone" type="radio" value=".sbs" checked> <span>.sbs</span>
+                            </div>
+                            <div class="radio-item">
+                                <input name="zone" type="radio" value=".top"> <span>.top</span>
+                            </div>
+                            <div class="radio-item">
+                                <input name="zone" type="radio" value=".buzz"> <span>.buzz</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="numbers">
+                        <p>Добавление доп. случайных цифр</p>
+                        <div class="container">
+                            <div class="radio-item">
+                                <input name="numbers" type="radio" value="yes"> <span>Да</span>
+                            </div>
+                            <div class="radio-item">
+                                <input name="numbers" type="radio" value="no" checked> <span>Нет</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="info hidden"></div>
             </form>
